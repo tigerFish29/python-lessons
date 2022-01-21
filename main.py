@@ -42,3 +42,28 @@ def master():
         print(i,c)
         #
 master()
+
+# classes in python 
+class Vehicle():
+    # constructor 
+    def __init__(self, bodystyle):
+        self.bodystyle = bodystyle
+
+class Car(Vehicle):
+    # constructor 
+    def __init__(self, type):
+        super().__init__("Car")
+        self.wheels = 4
+        self.doors = 4
+        self.type = type
+
+class Motorcycle(Vehicle):
+    # constructor 
+    def __init__(self, type, handlebar):
+        super().__init__("Motorcycle")
+        if(handlebar):
+            self.wheels = 3
+        else:
+            self.wheels = 2
+        self.doors = 0
+        self.type = type
